@@ -1,0 +1,14 @@
+<p>users works!</p>
+<table border="1px">
+    <th>ID</th>
+    <th>Name</th>
+    <th>UserName</th>
+    <th>Email</th>
+    <tr *ngFor="let list1 of List">
+        <td>{{ list1.id}}</td>
+        <td>{{ list1.name}}</td>
+        <td>{{ list1.username}}</td>
+        <td>{{ list1.email}}</td>
+        <td><button [routerLink]="['/edit', list1.id]">Edit </button></td> <td> <button [routerLink]="['../details']"[queryParams]="{name:list1.name}"> Details</button></td>
+    </tr>
+</table>

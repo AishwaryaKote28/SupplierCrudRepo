@@ -1,0 +1,41 @@
+<div class="container">
+    <h4>Billing Address</h4>
+    <br>
+    <form [formGroup]="billingForm">
+        <div formGroupName="sBilling"> 
+        <div class="row g-3">
+            <div class="col-10">
+                <!-- <label for="inputAddress" class="form-label">Address Line 1</label> -->
+                <input type="text" class="form-control border border-dark"  id="inputAddress" placeholder="Address Line 1" formControlName="Address1">
+                 <span style="color: red;" *ngIf="Address1 && Address1.invalid && Address1.touched">Required Field*</span>
+
+            </div>
+        </div>
+        <br><br>
+        <div class="row g-3">
+            <div class="col-10">
+                <!-- <label for="inputAddress2" class="form-label">Address Line 2</label> -->
+                <input type="text"  class="form-control border border-dark" id="inputAddress2" placeholder="Address Line 2" formControlName="Address2">
+                <span style="color: red;" *ngIf="Address2 && Address2.invalid && Address2.touched">Required Field*</span>
+            </div>
+            </div>
+            <br><br>
+            <div class="row g-3">
+            <div class="col-md-3">
+                <!-- <label for="inputCity" class="form-label">City</label> -->
+                <input type="text"  class="form-control border border-dark" placeholder="City" id="inputCity" formControlName="City">
+                <span style="color: red;" *ngIf="City && City.invalid && City.touched">Required Field*</span>
+            </div>
+            <div class="col-md-3">
+                <input type="text"  class="form-control border border-dark"  placeholder="State" id="inputState" formControlName="State">
+                <span style="color: red;" *ngIf="State && State.invalid && State.touched">Required Field*</span>
+            </div>
+            <div class="col-md-4">
+                <input type="text"  class="form-control border border-dark"  placeholder="Country" id="inputCountry" formControlName="Country">
+                <span style="color: red;" *ngIf="Country && Country.invalid && Country.touched">Required Field*</span>
+            </div>  
+            </div>
+        </div>
+    </form>
+    <!-- {{supplierForm.value | json}} -->
+</div>

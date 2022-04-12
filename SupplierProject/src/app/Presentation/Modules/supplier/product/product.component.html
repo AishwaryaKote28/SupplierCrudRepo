@@ -1,0 +1,33 @@
+<div class="container">
+    <!-- <h4 style="margin-left: 4%; padding-top:5px;"> Supplier</h4> -->
+    <form [formGroup]="ProductForm">
+        <div formGroupName="product">
+            <br><br>
+            <div class="row">
+             
+                <div class="col-md-5">
+                    <input type="text" class="form-control border border-dark" placeholder="Product Name"
+                        ngIfaria-label="Product name" formControlName="ProductName">
+                    <!-- <span style="color: red;"
+                    *ngIf="f['productName']?.errors?.['required'] && f['productName'].touched">Required Field*</span> -->
+                    <span style="color: red;" *ngIf="ProductName && ProductName.invalid && ProductName.touched">Required
+                        Field*</span>
+
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-5">
+                    <input type="number" class="form-control border border-dark" placeholder="Unit Price"
+                        aria-label=" Unitprice" formControlName="UnitPrice">
+                    <!-- <span style="color: red;" 
+                    *ngIf="f['unitPrice']?.errors?.['required'] && f['unitPrice'].touched">Required Field*</span> -->
+                    <span style="color: red;" *ngIf="UnitPrice && UnitPrice.invalid && UnitPrice.touched">Required
+                        Field*</span>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!--{{supplierForm.value | json}} -->

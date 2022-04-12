@@ -1,0 +1,15 @@
+<h3 style="color: brown;">Select Vehicles</h3>
+<p>
+    <input type="radio"  value="Form1" name="Fparent" (click)="list1()" style="color: blueviolet;"> Cars
+    <input type="radio" value="Form2" name="Fparent" (click)="list2()"  style="color: blueviolet;"> Bike
+ </p>
+
+ 
+<app-form1 *ngIf="name" (send)="send($event)"></app-form1>
+<app-form2 *ngIf="name1" (send2)="send2($event)"></app-form2>
+<app-list1 [parentchild]="parentchild"></app-list1>
+<app-list2 [parentchild1]="parentchild1"></app-list2>>
+
+
+<!-- <p>Hello</p> -->
+<router-outlet></router-outlet>
