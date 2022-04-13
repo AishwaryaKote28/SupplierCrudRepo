@@ -1,0 +1,24 @@
+<div class="container">
+    <h4 style="margin-left: 4%; padding-top:5px;"> Supplier</h4>
+    <form [formGroup]="supplierForm" (ngSubmit)="Edit()">
+      <div class="row">
+        <div class="col-md-5">
+          <input type="number" class="form-control border border-dark" placeholder="Id" aria-label="SupplierId"
+            formControlName="supplierId">
+          <span style="color: red;" *ngIf="f['supplierId']?.errors?.['required'] && f['supplierId'].touched">Required Field*</span>
+          <span style="color: red;" *ngIf="f['supplierId']?.errors?.['minlength'] && f['supplierId'].touched">Enter min length*</span>
+        </div>
+        <div class="col-md-5">
+          <input type="text" class="form-control border border-dark" placeholder="Name" aria-label="Name"
+            formControlName="name">
+          <span style="color: red;" *ngIf="f['name']?.errors?.['required'] && f['name'].touched">Required Field*</span>
+        </div>
+      </div>
+      <br>
+      <button>Update</button>
+      
+      
+    </form>
+  </div>
+  <!--{{supplierForm.value | json}} -->
+  <!-- <router-outlet> </router-outlet> -->

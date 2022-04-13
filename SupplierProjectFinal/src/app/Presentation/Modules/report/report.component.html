@@ -1,0 +1,39 @@
+`<table datatable [dtOptions]="dtOptions" class="row-border hover">
+    <thead>
+        <tr>
+            <th> Supplier Id</th>
+            <th>Supplier Name</th>
+            <th >Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of list">
+            <td>
+                {{item.supplierId}}
+            </td>
+            <td>
+                {{item.name}}
+            </td>
+            <td>
+                <button routerLink='../editdetails/{{item.supplierId}}' class="btn btn-info">Edit </button>
+                <button class="btn btn-danger mx-3" (click)="DeleteSupplier(item.supplierId)"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <table datatable [dtOptions]="dtOptions" class="row-border hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Foo</td>
+        <td>Bar</td>
+    </tbody>
+</table> -->
